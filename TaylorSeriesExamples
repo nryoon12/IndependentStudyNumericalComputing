@@ -40,7 +40,7 @@ t = np.arange(0,2+h,h)
 #initial condition:
 x0 = 1
 
-#The Euler;s method:
+#The Euler's method:
 x = np.zeros(len(t))
 x[0] = x0
 
