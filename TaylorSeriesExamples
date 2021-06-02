@@ -1,0 +1,51 @@
+# example 1 from ch.10.1
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.style.use('seaborn-poster')
+%matplotlib inline
+
+# Define parameters:
+x_diff = lambda t, x:1 + x**2 + t**3
+h = 0.01     # h = (b-a)/(steps = 100)
+t = np.arange(1, 2+h, h)  
+
+# Initial condition:
+x0 = -4
+
+# The Euler's Method:
+x = np.zeros(len(t))
+x[1] = x0
+
+for i in range(1, len(t)-1):
+    x[i+1] = x[i] + h*x_diff(t[i], x[i])
+print(x[100])
+
+#  Answer =  4.142269235668999
+
+####################################################
+# Euler's method Example 2:
+import numpy as np
+import math
+
+# Define Paramere:
+x_diff = lambda t, x: x  #ODE
+a = 0
+b = 2
+h = (b - a)/100
+t = np.arange(0,2+h,h)
+
+
+#initial condition:
+x0 = 1
+
+#The Euler;s method:
+x = np.zeros(len(t))
+x[0] = x0
+
+for i in range(0, len(t)-1):
+    x[i+1] = x[i] + h*x_diff(t[i], x[i])   # from the Taylor series
+print(x[100])
+
+# Answer: 7.244646118252337
