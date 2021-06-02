@@ -1,1 +1,1 @@
-# IndependentStudyNumericalComputing
+# Independent Study: NumericalComputing
